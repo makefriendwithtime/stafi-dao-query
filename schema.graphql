@@ -31,13 +31,9 @@ type VoteByNumber @entity {
 
   governType: BigInt
 
-  totalVoter: BigInt
+  state: BigInt
 
-  approveVoter: BigInt
-
-  opposeVoter: BigInt
-
-  success: Boolean
+  voters: BigInt
 
   contractAddress: String!
 }

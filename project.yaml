@@ -37,4 +37,4 @@ dataSources:
           kind: substrate/FrontierEvmEvent
           filter:
             topics:
-              - VoteByNumber(address indexed votor,uint256 number,uint256 governType,uint256 totalVoter,uint256 approveVoter,uint256 opposeVoter,bool success)
+              - VoteByNumber(address indexed votor,uint256 number,uint256 governType,uint256 state,uint256 voters)

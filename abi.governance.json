@@ -83,26 +83,14 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "totalVoter",
+        "name": "state",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "approveVoter",
+        "name": "voters",
         "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "opposeVoter",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "success",
-        "type": "bool"
       }
     ],
     "name": "VoteByNumber",
@@ -491,7 +479,7 @@
       },
       {
         "internalType": "address",
-        "name": "_ownerAddress",
+        "name": "_owner",
         "type": "address"
       }
     ],
@@ -502,7 +490,7 @@
   },
   {
     "inputs": [],
-    "name": "ownerAddress",
+    "name": "owner",
     "outputs": [
       {
         "internalType": "address",
@@ -529,6 +517,19 @@
   {
     "inputs": [],
     "name": "rewardAddr",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "searchAddr",
     "outputs": [
       {
         "internalType": "address",
@@ -704,6 +705,19 @@
       }
     ],
     "name": "setRewardDownLimit",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_searchAddr",
+        "type": "address"
+      }
+    ],
+    "name": "setSearchAddr",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
