@@ -2,7 +2,7 @@ specVersion: 0.2.0
 name: stafi-dao-query
 version: 1.0.0
 description: 'stafi-dao-query'
-repository: https://github.com/makefriendwithtime/stafi-dao-query
+repository: 'https://github.com/makefriendwithtime/stafi-dao-query'
 schema:
   file: ./schema.graphql
 network:
