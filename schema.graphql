@@ -18,6 +18,8 @@ type StartGovern @entity {
 
   totalVoter: BigInt
 
+  totalMember: BigInt
+
   contractAddress: String!
 }
 

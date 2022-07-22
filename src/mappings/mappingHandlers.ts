@@ -3,7 +3,7 @@ import { FrontierEvmEvent } from '@subql/contract-processors/dist/frontierEvm';
 import { BigNumber } from "ethers";
 
 // Setup types from ABI
-type GovernEventArgs = [string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, string, BigNumber] & {creator: string; number: BigNumber; governType: BigNumber; startDate: BigNumber; endDate: BigNumber; uintValue: BigNumber; strValue: string; totalVoter:BigNumber;};
+type GovernEventArgs = [string, BigNumber, BigNumber, BigNumber, BigNumber, BigNumber, string, BigNumber] & {creator: string; number: BigNumber; governType: BigNumber; startDate: BigNumber; endDate: BigNumber; uintValue: BigNumber; strValue: string; totalVoter:BigNumber; totalMember:BigNumber;};
 type VoteEventArgs = [string, BigNumber, BigNumber, BigNumber, BigNumber] & {votor: string; number: BigNumber; governType: BigNumber; state: BigNumber; voters: BigNumber;};
 
 export async function handleGovernEvmEvent(event: FrontierEvmEvent<GovernEventArgs>): Promise<void> {
@@ -17,6 +17,7 @@ export async function handleGovernEvmEvent(event: FrontierEvmEvent<GovernEventAr
     startGovern.uintValue = event.args.uintValue.toBigInt();
     startGovern.strValue = event.args.strValue;
     startGovern.totalVoter = event.args.totalVoter.toBigInt();
+    startGovern.totalMember = event.args.totalMember.toBigInt();
     startGovern.contractAddress = event.address;
 
     await startGovern.save();

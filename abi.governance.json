@@ -54,6 +54,12 @@
         "internalType": "uint256",
         "name": "totalVoter",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalMember",
+        "type": "uint256"
       }
     ],
     "name": "StartGovern",
@@ -335,6 +341,16 @@
       {
         "internalType": "uint256",
         "name": "totalVoter",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalMember",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "participation",
         "type": "uint256"
       },
       {
