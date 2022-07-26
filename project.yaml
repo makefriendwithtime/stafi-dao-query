@@ -21,7 +21,7 @@ dataSources:
       file: './node_modules/@subql/contract-processors/dist/frontierEvm.js'
       options:
         abi: governance
-        address: '0x3F8bc5F0D5c92820d8aF60D98e63efDef55804D3'
+        address: '0x0edC4F24740c4B7433739163433768B21b7d328B'
     assets:
       governance:
         file: './abi.governance.json'
